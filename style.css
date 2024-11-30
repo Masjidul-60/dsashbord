@@ -1,0 +1,443 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #9299a7;
+    color:black;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+  }
+  
+
+  .dashboard {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+
+  .sidebar {
+    width: 260px;
+    background-color: #eef1fd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6c5ce7;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+  
+  .add-new {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  
+  .add-new:hover {
+    background-color: #5b4ad1;
+    transform: scale(1.05);
+  }
+  
+  .nav {
+    width: 100%;
+  }
+  
+  .nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 15px;
+    color: #6c5ce7;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .nav a:hover,
+  .nav a.active {
+    background-color: #6c5ce7;
+    color: white;
+  }
+  
+  .nav a .badge {
+    position: absolute;
+    right: 15px;
+    background-color: #ff4757;
+    color: white;
+    font-size: 12px;
+    padding: 3px 7px;
+    border-radius: 12px;
+  }
+  
+  .user {
+    margin-top: auto;
+    text-align: center;
+    color: #6c5ce7;
+  }
+  
+  .user-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .user-role {
+    font-size: 13px;
+    color: #aaa;
+  }
+  
+  .logout {
+    margin-top: 20px;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .logout:hover {
+    background-color: #e84141;
+    transform: scale(1.05);
+  }
+  
+ 
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .header h1 {
+    font-size: 26px;
+    color: #333;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .search-bar input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .search-bar button {
+    background-color: #6c5ce7;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-bar button::after {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/1827/1827318.png'); /* Bell icon */
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+
+  .incoming-lessons .lesson-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eef1fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lesson-card p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .lesson-card span {
+    font-size: 13px;
+    color: #555;
+  }
+  
+  .lesson-link {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .lesson-link:hover {
+    background-color: #5b4ad1;
+    transform: scale(1.1);
+  }
+  
+
+  #lessonprogress{
+
+    background-image:url(third.jpg);
+    background-attachment: fixed;
+    position:dynamic;
+  }
+  .semester-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eef1fd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .semester-progress p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #555;
+  }
+  
+  .semester-progress p:first-child {
+    font-weight: bold;
+    color: #6c5ce7;
+  }
+  
+  /* INBOX */
+  .inbox .message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eef1fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .message p {
+    font-size: 15px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .message p strong {
+    color: #6c5ce7;
+  }
+  
+  .message:hover {
+    background-color: #dfe3ff;
+  }
+  
+ 
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+    }
+  
+    .search-bar input {
+      width: 200px;
+    }
+  
+    .header h1 {
+      font-size: 22px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .sidebar {
+      width: 180px;
+      padding: 15px;
+    }
+  
+    .search-bar input {
+      width: 150px;
+    }
+  
+    .header h1 {
+      font-size: 18px;
+    }
+  
+    .lesson-card p {
+      font-size: 14px;
+    }
+  }
+
+.user-photo {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden; 
+    margin: 0 auto 10px;
+    border: 3px solid #6c5ce7;
+  }
+  
+  .user-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+    
+.groups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .group-card {
+    width: 150px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .group-card h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .group-card p {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+
+  .semester-progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .progress-card {
+    width: 48%;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .progress-card h3 {
+    font-size: 18px;
+    color: #6c5ce7;
+    margin-bottom: 10px;
+  }
+  
+  .progress-card p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 30px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+  }
+  
+  .progress-bar div {
+    height: 100%;
+    width: 95%; 
+    background-color: #6c5ce7;
+  }
+  .semester-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; 
+    justify-content: center; 
+    padding: 20px; 
+    background-color: #eef1fd; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .progress-card {
+    flex: 1 1 45%; 
+    min-width: 220px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .progress-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .progress-card h3 {
+    font-size: 20px; 
+    color: #6c5ce7;
+    margin-bottom: 15px;
+  }
+  
+  .progress-card p {
+    font-size: 16px; 
+    color: #555;
+    margin: 10px 0;
+  }
+    
